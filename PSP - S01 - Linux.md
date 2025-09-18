@@ -61,33 +61,38 @@ free -h
 
 6. Lanza un monitor de procesos en tiempo real y observa:
 ```bash
-
+ps aux
+# o
+top
+#o
+htop
 ```
     
 - Número total de procesos.
-	
+	24 task
 - Cuál consume más CPU.
-	
+	60 root
 - Sal del programa.
-        
+    ctrl + c    
 7. Instala y ejecuta una versión mejorada del monitor de procesos y compárala con la anterior.
 ```bash
-
+sudo apt install htop
 ```
     
 8. Obtén un listado de todos los procesos del sistema y localiza el proceso de tu shell.
 ```bash
-
+ps -lax # l listado, a ocultos y x procesos del usuario actual
+ps -lax |grep tty # Localizar
 ```
     
 9. Muestra la jerarquía de procesos en forma de árbol.
 ```bash
-
+pstree
 ```
     
 10. Lanza el comando `ping` contra `google.com` en segundo plano (&) y obtén su identificador de proceso (PID).
 ```bash
-
+ping google.com > &
 ```
     
 11. Finaliza el proceso de Firefox usando su PID.
