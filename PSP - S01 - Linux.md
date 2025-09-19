@@ -97,7 +97,7 @@ ping google.com > &
     
 11. Finaliza el proceso de Firefox usando su PID.
 ```bash
-
+ps -e | grep firefox
 ```
     
 12. Vuelve a lanzarlo y esta vez deténlo, luego reactívalo.
