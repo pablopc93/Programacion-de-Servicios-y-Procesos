@@ -102,6 +102,14 @@ ps -e | grep firefox
     
 12. Vuelve a lanzarlo y esta vez deténlo, luego reactívalo.
 ```bash
+# Inicio del servidor
+sudo systemctl start nombre_servicio
+
+# Detencion el servicio
+sudo systemctl stop nombre_servicio
+
+# volver a iniciarlo
+sudo systemctl start nombre_servicio
 
 ```
     
@@ -117,17 +125,23 @@ ps -e | grep firefox
 
 14. Consulta el estado del servicio de conexión remota (por ejemplo, `ssh`).
 ```bash
+# Verificar si el servicio ssh está activo
+sudo systemctl status ssh
 
 ```
     
 15. Inicia dicho servicio si está instalado.
 ```bash
-
+sudo systemctl stat ssh
 ```
     
 16. Desactívalo del arranque automático y vuelve a activarlo.
 ```bash
+# para desactivarlo
+sudo systemctl disable ssh
 
+# para volver a activarlo
+sudo systemctl enable ssh
 ```
     
 
@@ -137,32 +151,33 @@ ps -e | grep firefox
 
 17. Lista todos los archivos, incluidos los ocultos, en tu directorio personal.
 ```bash
-
+ls -la
+ls -l
 ```
     
 18. Crea una carpeta llamada `prueba`.
 ```bash
-
+mkdir prueba
 ```
     
 19. Dentro de esa carpeta, crea un archivo `notas.txt` que contenga el texto “Hola Linux”.
 ```bash
-
+echo "Hola linux" > prueba/notas.txt
 ```
     
 20. Copia ese archivo con otro nombre.
 ```bash
-
+cp prueba/notas.txt prueba/notas1.txt
 ```
     
 21. Renombra el archivo copiado.
 ```bash
-
+mv prueba/notas1.txt prueba/notas22.txt
 ```
     
 22. Borra el archivo renombrado.
 ```bash
-
+rm prueba/notas22.txt
 ```
     
 
@@ -172,27 +187,27 @@ ps -e | grep firefox
 
 23. Redirige la salida de un listado de archivos a un archivo llamado `listado.txt`.
 ```bash
-
+ls -l > listado.txt
 ```
     
 24. Añade una nueva línea al final del mismo archivo con el texto "Fin del listado".
 ```bash
-
+echo "Fin del listado" >> listado.txt
 ```
     
 25. Redirige los errores (2) de una operación no válida (`let a=3/0`) a un dispositivo nulo para ignorarlos.
 ```bash
-
+let a=3/0 2>/dev/null
 ```
     
 26. Filtra de una lista de procesos únicamente aquellos que contengan la palabra “bash”.
 ```bash
-
+ps aux | grep bash
 ```
     
 27. Muestra solo las últimas 5 líneas del archivo `listado.txt`.
 ```bash
-
+tail -n 5 listado.txt
 ```
     
 
@@ -227,27 +242,32 @@ ps -e | grep firefox
 
 32. Comprueba la conectividad con el servidor `google.com` enviando unos pocos paquetes.
 ```bash
-
+ping -c 4 google.com
 ```
     
 33. Muestra la configuración de tus interfaces de red.
 ```bash
-
+ip addr
+ip a
+ipconfig
 ```
     
 34. Revisa qué puertos están en escucha en tu máquina.
 ```bash
-
+ss -tuln
+# t para los puertos TCP, u para puertos UDP, l para puertos escucha, n para numeros de puertos
 ```
     
 35. Consulta la dirección IP asociada al dominio `google.com`.
 ```bash
-
+nslookup google.com
 ```
     
 36. Realiza la misma consulta de resolución DNS usando otra herramienta distinta.
 ```bash
-
+ping -c 1 google.com
+# o
+getent hosts google.com
 ```
     
 37. Conéctate de forma remota a otra máquina mediante un protocolo seguro (si tienes acceso).
@@ -267,27 +287,27 @@ ps -e | grep firefox
 
 39. Crea un usuario de prueba llamado `alumno1`.
 ```bash
-
+sudo useradd -m alumno1
 ```
     
 40. Cámbiale la contraseña.
 ```bash
-
+sudo passwd alumno1
 ```
     
 41. Cambia los permisos de un archivo a `755`.
 ```bash
-
+chmod 755 ejemplo
 ```
     
 42. Cambia el propietario de un archivo a otro usuario.
 ```bash
-
+sudo chown nuevo_usuario ejemplo
 ```
     
 43. Elimina el usuario creado.
 ```bash
-
+sudo userdel -r alumno1
 ```
     
 
