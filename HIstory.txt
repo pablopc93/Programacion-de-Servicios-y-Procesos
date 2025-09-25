@@ -1,0 +1,99 @@
+  136  export HISTFILESIZE=100000
+  137  export HISTTIMEFORMAT="%F %T "
+  138  source ~/.bashrc
+  139  history
+  140  clear
+  141  export HITSIZE=10000
+  142  export HITFILESIZE=20000
+  143  export HITTIMEFORMAT="%F %T "
+  144  history
+  145  clear
+  146  nano ~/.bashrc
+  147  uname -a
+  148  nano ~/.bashrc
+  149  uname -r
+  150  df -h
+  151  du -h /etc
+  152  du -sh /etc
+  153  du --help
+  154  sudo du -sh /etc
+  155  free -h
+  156  clear
+  157  ps aux
+  158  top
+  159  htop
+  160  sudo htop
+  161  clear
+  162  top
+  163  sudo apt install htop
+  164  ps -lax
+  165  ps --help
+  166  ps -x -help
+  167  ps -x --help
+  168  clear
+  169  pstree
+  170  ping google.com &
+  171  clear
+  172  jobs
+  173  ping -c 4 google.com
+  174  history
+  175  clear
+  176  ps -lax |grep tty
+  177  ps -lax |grep bash
+  178  clear
+  179  cls
+  180  clear
+  181  ps -e | grep firefox
+  182  sudo systemctl start nombre_servicio
+  183  sudo systemctl stop nombre_servicio
+  184  sudo systemctl start nombre_servicio
+  185  clear
+  186  sudo systemctl status ssh
+  187  systenctk status ssh
+  188  systenctl status ssh
+  189  clear
+  190  sudo system start ssh
+  191  clear
+  192  sudo systemctl disable ssh
+  193  sudo systemctl enable ssh
+  194  clear
+  195  ls -la
+  196  ls -l
+  197  mkdir prueba
+  198  clear
+  199  echo "Hola linux" > prueba/notas.txt
+  200  cp prueba/notas.txt prueba/notas1.txt
+  201  mv prueba/notas2.txt prueba/notas22.txt
+  202  mv prueba/notas1.txt prueba/notas22.txt
+  203  rm prueba/notas22.txt
+  204  ls -l > listado.txt
+  205  echo "Fin del listado" >> listado.txt
+  206  ls -l
+  207  let a=3/0 2>/dev/null
+  208  clear
+  209  ps aux | grep bash
+  210  tail -n 5 listado.txt
+  211  ping -c 4 google.com
+  212  ip addr
+  213  ip a
+  214  ipconfig
+  215  clear
+  216  ss -tlun
+  217  netstart -tlun
+  218  netstart -tuln
+  219  nslookup google.com
+  220  dig +short google.com
+  221  host google.com
+  222  clear
+  223  ping -c 1 google.com
+  224  getent host google.com
+  225  getent hosts google.com
+  226  sudo userad -m alumno1
+  227  sudo passwd alumno1
+  228  chmod 755 nombre_archivo
+  229  clear
+  230  ls -l prueba
+  231  sudo chown nuevo_usuario ejemplo
+  232  sudo userdel -r alumno1
+  233  clear
+  234  history
